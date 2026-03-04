@@ -7,12 +7,32 @@
 
 Hard execution and budget limits for autonomous agents — enforced locally.
 
-Autonomous agents can silently burn thousands of dollars in token spend or enter infinite tool loops. AuthorityLayer enforces hard runtime limits so agents stop the moment a boundary is crossed.
-
 ✔ No telemetry  
 ✔ Works fully offline  
 ✔ Fail-closed by default  
 ✔ Zero runtime dependencies
+
+---
+
+## Why AuthorityLayer Exists
+
+Autonomous AI agents can fail in expensive, hard-to-detect ways:
+
+- **Runaway token spend** — a looping agent burns thousands of dollars before anyone notices
+- **Infinite tool loops** — agents retry the same failing call indefinitely
+- **Retry storms** — cascading failures hammer external APIs with no ceiling
+- **Cascading tool call explosions** — one agent spawns sub-calls that spawn more
+
+Most tooling detects these problems after they happen — in dashboards, alerts, or post-run analytics.
+
+AuthorityLayer prevents them inside the runtime, before cost or damage accumulates.
+
+It helps developers:
+
+- prevent runaway LLM costs
+- stop infinite agent loops
+- limit AI agent tool calls per run and per minute
+- enforce runtime safety for autonomous agents
 
 ---
 
@@ -46,13 +66,12 @@ AuthorityLayer Doctor  authority-layer@0.1.2
 All checks passed. AuthorityLayer is ready.
 ```
 
-Try a simulated enforcement run:
+## CLI Tools
 
-```bash
-npx authority-layer simulate
-```
-
-Runs a canned agent loop that intentionally exceeds the budget cap — so you can see AuthorityLayer halt execution and verify the event chain without writing any code.
+| Command | What it does |
+|---------|-------------|
+| `npx authority-layer doctor` | Verify your installation passes all environment checks |
+| `npx authority-layer simulate` | Run a live enforcement simulation — see a halt in action without writing any code |
 
 ---
 
@@ -97,6 +116,19 @@ These primitives enforce boundaries directly inside the execution loop — not i
 | **Tool throttle** | `toolThrottle.maxCallsPerMinute` | Rate of tool calls using a sliding 60-second window — no fixed buckets. → [docs](./docs/enforcement.md#3-tool-throttle) |
 
 When a primitive breaches, AuthorityLayer throws a typed `EnforcementHalt` error with a structured `.enforcement` object. Execution never crashes silently.
+
+---
+
+## How AuthorityLayer Is Different
+
+Most AI guardrail tools focus on moderation or observability. AuthorityLayer focuses on **runtime enforcement**.
+
+| Tool type | What it does |
+|-----------|-------------|
+| Prompt guardrails | Filter or rewrite prompts and outputs |
+| Observability platforms | Analyze agent behavior after execution |
+| Cost analytics | Track and report token usage |
+| **AuthorityLayer** | Enforces hard limits **during** execution — halts immediately when a boundary is crossed |
 
 ---
 
