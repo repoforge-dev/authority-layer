@@ -7,14 +7,16 @@
 
 Hard execution and budget limits for autonomous agents — enforced locally.
 
-- No telemetry
-- Works fully offline
-- Fail-closed by default
-- Zero runtime dependencies
+Autonomous agents can silently burn thousands of dollars in token spend or enter infinite tool loops. AuthorityLayer enforces hard runtime limits so agents stop the moment a boundary is crossed.
+
+✔ No telemetry  
+✔ Works fully offline  
+✔ Fail-closed by default  
+✔ Zero runtime dependencies
 
 ---
 
-## Live Enforcement Demo
+## Live Enforcement Demo (6-second example)
 
 ![AuthorityLayer enforcement demo](https://raw.githubusercontent.com/032383justin/authority-layer/main/docs/assets/enforcement-demo.svg)
 
@@ -76,7 +78,9 @@ try {
 
 ## Enforcement Primitives
 
-Three composable primitives. Each is independently opt-in — omit a config key to disable it entirely.
+AuthorityLayer V1 provides three composable enforcement primitives. Each is opt-in — omit a config key to disable it.
+
+These primitives enforce boundaries directly inside the execution loop — not in dashboards or external monitoring.
 
 | Primitive | Config key | What it enforces |
 |-----------|------------|------------------|
@@ -91,12 +95,16 @@ When a primitive breaches, AuthorityLayer throws a typed `EnforcementHalt` error
 ## Documentation
 
 | Topic | File |
-|-------|------|
+|------|------|
 | Concepts & philosophy | [docs/concepts.md](./docs/concepts.md) |
-| Enforcement primitives (full detail) | [docs/enforcement.md](./docs/enforcement.md) |
+| Enforcement primitives | [docs/enforcement.md](./docs/enforcement.md) |
 | API reference | [docs/api.md](./docs/api.md) |
 | Integrity chain | [docs/integrity.md](./docs/integrity.md) |
-| Live example | `npm run example` |
+| Example run | `npm run example` |
+
+---
+
+AuthorityLayer is designed as a minimal enforcement primitive — not a platform, dashboard, or governance system.
 
 ---
 
