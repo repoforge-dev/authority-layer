@@ -16,7 +16,7 @@ Autonomous agents can silently burn thousands of dollars in token spend or enter
 
 ---
 
-## Live Enforcement Demo (6-second example)
+## Live Enforcement Demo (10-second example)
 
 ![AuthorityLayer enforcement demo](https://raw.githubusercontent.com/032383justin/authority-layer/main/docs/assets/enforcement-demo.svg)
 
