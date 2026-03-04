@@ -1,5 +1,7 @@
 # AuthorityLayer
 
+![CI](https://github.com/032383justin/authority-layer/actions/workflows/ci.yml/badge.svg)
+
 Hard execution and budget limits for autonomous agents — enforced locally.
 
 AuthorityLayer prevents runaway spend, infinite tool loops, and uncontrolled external calls in agentic systems. It enforces strict boundaries inside your runtime and halts execution safely when limits are breached.

@@ -1,5 +1,5 @@
 {
-  "name": "authority-layer",
+  "name": "@authority-layer/core",
   "version": "0.1.0",
   "description": "Hard execution and budget limits for autonomous agents — enforced locally.",
   "main": "dist/index.js",
@@ -8,9 +8,10 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc",
-    "dev": "tsc --watch",
-    "typecheck": "tsc --noEmit"
+    "build": "tsc -p tsconfig.json",
+    "dev": "tsc -p tsconfig.json --watch",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "validate": "tsc -p tsconfig.json && node dist/index.js"
   },
   "keywords": [
     "ai",

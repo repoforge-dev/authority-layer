@@ -1,0 +1,7 @@
+{
+    "name": "authority-layer-repo",
+    "private": true,
+    "workspaces": [
+        "packages/core"
+    ]
+}
