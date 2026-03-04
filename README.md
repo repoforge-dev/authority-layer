@@ -39,6 +39,12 @@ Chain integrity : ✅  verified
 
 ---
 
+## Example Run
+
+![AuthorityLayer demo](./demo.svg)
+
+---
+
 ## Why AuthorityLayer Exists
 
 Autonomous agents introduce a new risk surface:
