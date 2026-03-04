@@ -20,13 +20,13 @@ jobs:
           cache: "npm"
 
       - name: Install deps
-        run: npm ci
+        run: npm install
 
       - name: Build core
-        run: npm run -w @authority-layer/core build
+        run: npm run -w authority-layer build
 
       - name: Typecheck core
-        run: npm run -w @authority-layer/core typecheck
+        run: npm run -w authority-layer typecheck
 
       - name: Run minimal validation example
-        run: npm run -w @authority-layer/core validate
+        run: npm run -w authority-layer validate

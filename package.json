@@ -5,6 +5,6 @@
         "packages/core"
     ],
     "scripts": {
-        "example": "npm run -w @authority-layer/core build && node examples/run.js"
+        "example": "npm run -w authority-layer build && node examples/run.js"
     }
 }
