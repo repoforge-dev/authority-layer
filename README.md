@@ -15,13 +15,35 @@ Fail-closed by default.
 ## Quick Start
 
 ```bash
-git clone https://github.com/032383justin/authority-layer.git
-cd authority-layer
-npm install
-npm run example
+npm install authority-layer
 ```
 
-See a real enforcement halt in under 30 seconds:
+Verify the install in seconds:
+
+```bash
+npx authority-layer doctor
+```
+
+Expected output:
+
+```
+AuthorityLayer Doctor  authority-layer@0.1.0
+
+  ✔  Node.js version >= 18                  pass
+  ✔  crypto module (sha256)                 pass
+  ✔  AUTHORITY_LAYER_DISABLE not set        pass
+  ✔  core module loads offline              pass
+  ✔  AuthorityLayer instantiates            pass
+
+All checks passed. AuthorityLayer is ready.
+```
+
+See a live enforcement halt:
+
+```bash
+git clone https://github.com/032383justin/authority-layer.git
+cd authority-layer && npm install && npm run example
+```
 
 ```
 ⛔  Execution halted
