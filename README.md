@@ -120,7 +120,7 @@ Badge:
 
 Analysis page:
 
-- `https://repoforge.dev/repos/repoforge-dev/authority-layer`
+- [repoforge-dev/authority-layer](https://repoforge.dev/repos/repoforge-dev/authority-layer)
 
 The RepoScore page is useful here because AuthorityLayer is a runtime-safety package. A public analysis page makes it easy to inspect documentation quality, discoverability, and onboarding clarity from the perspective of a developer evaluating whether to trust the project in a real workflow.
 
