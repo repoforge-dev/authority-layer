@@ -1,6 +1,6 @@
 # AuthorityLayer
 
-[![RepoScore](https://repoforge.dev/badge/repoforge-dev/authority-layer?v=20260310-0212)](https://repoforge.dev/repos/repoforge-dev/authority-layer)
+[![RepoScore](https://repoforge.dev/badge/repoforge-dev/authority-layer)](https://repoforge.dev/repos/repoforge-dev/authority-layer)
 
 AuthorityLayer enforces hard runtime limits for AI agents so budgets, loop counts, and tool-call rates fail closed instead of drifting until after damage is done.
 
@@ -115,7 +115,7 @@ RepoScore automatically analyzes repositories and identifies practical improveme
 Badge:
 
 ```md
-[![RepoScore](https://repoforge.dev/badge/repoforge-dev/authority-layer?v=20260310-0212)](https://repoforge.dev/repos/repoforge-dev/authority-layer)
+[![RepoScore](https://repoforge.dev/badge/repoforge-dev/authority-layer)](https://repoforge.dev/repos/repoforge-dev/authority-layer)
 ```
 
 Analysis page:
