@@ -12,7 +12,7 @@ assert.equal(fs.existsSync(resolvePath('examples', 'run.js')), true);
 
 const packageJson = JSON.parse(fs.readFileSync(resolvePath('package.json'), 'utf8'));
 
-assert.equal(packageJson.homepage, 'https://github.com/repoforge-dev/authority-layer');
+assert.equal(packageJson.homepage, 'https://repoforge.dev/repos/repoforge-dev/authority-layer');
 assert.match(packageJson.repository.url, /repoforge-dev\/authority-layer/);
 
 console.log('AuthorityLayer workspace smoke tests passed.');
